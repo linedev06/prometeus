@@ -1,0 +1,277 @@
+
+
+
+
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Prometeus - Plataforma Jurídica
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px; 
+        width: 300px;
+        height: 100%;
+        background: black;
+        padding-top: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar a {
+        display: block;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .sidebar a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+    .overlay.active {
+        display: block;
+    }
+    .imagem-reduzida {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 10px auto 20px;
+            border-radius:50%;
+}
+</style>
+ <body class="bg-white text-gray-900 font-roboto">
+    <img class="imagem-reduzida" src="Prometeus.png" alt="Logo Prometeus" class="mx-auto my-4 w-1/2 md:w-1/4"/>
+
+    <button class="fixed top-4 left-4 text-white bg-black p-2 rounded-md" onclick="toggleSidebar()">
+        <i class="fas fa-bars text-2xl"></i>
+    </button>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" onclick="toggleSidebar()" class="text-right block p-4">
+            <i class="fas fa-times text-white text-2xl"></i>
+        </a>
+        <a href="#">Início</a>
+        <a href="#">Consultoria</a>
+        <a href="#">Assinatura Digital</a>
+        <a href="#">Áreas de Especialização</a>
+        <a href="#">Blog</a>
+        <a href="#">Fórum</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+
+  <main class="container mx-auto p-4">
+   <section class="text-center my-8">
+    <h2 class="text-3xl font-bold mb-4">
+     Bem-vindo ao Prometeus
+    </h2>
+    <p class="text-lg">
+     Sua plataforma digital para soluções jurídicas inovadoras e eficientes.
+    </p>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Consultoria Virtual 24h
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de um advogado virtual assistindo um cliente através de um computador" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/85G9einLJ8J8Glt_yBD64du5yqCGrx5P-Hb-Nv0_CUI.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Utilize nossa inteligência artificial para obter respostas detalhadas e sugestões de caminhos legais, sem a necessidade de uma consulta direta com um advogado.
+      </p>
+      <p>
+       Receba alertas sobre mudanças legislativas que podem impactar você, mantendo-o sempre atualizado e informado.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Assinatura Digital de Documentos
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de uma pessoa assinando um documento digitalmente em um tablet" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/FHp12-g4O8grN98Ivsjt1C5aBREaLeKBz1_l1T8lLJk.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Assine contratos e outros documentos legais de forma segura e rápida, com validade jurídica garantida, diretamente no site.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Áreas de Especialização
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Direito Civil
+      </h4>
+      <p>
+       Consultoria especializada em direito civil, abrangendo contratos, responsabilidade civil, e mais.
+      </p>
+     </div>
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Direito Penal
+      </h4>
+      <p>
+       Especialistas em direito penal para defesa e acusação em processos criminais.
+      </p>
+     </div>
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Direito Trabalhista
+      </h4>
+      <p>
+       Consultoria em questões trabalhistas, incluindo direitos dos trabalhadores e empregadores.
+      </p>
+     </div>
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Direito de Criptomoedas
+      </h4>
+      <p>
+       Orientação sobre regulamentação e compliance no mercado de criptomoedas.
+      </p>
+     </div>
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Inteligência Artificial
+      </h4>
+      <p>
+       Consultoria sobre aspectos legais da inteligência artificial e suas aplicações.
+      </p>
+     </div>
+     <div class="p-4 border rounded">
+      <h4 class="text-xl font-bold mb-2">
+       Direito Ambiental
+      </h4>
+      <p>
+       Especialistas em legislação ambiental e sustentabilidade.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Motor de Pesquisa Avançado
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de uma tela de computador mostrando um motor de busca avançado com filtros" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/rLUsU1M3XA7x-pmSxTceqlTAS6AJ9W20m_SKQKbguHQ.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Busque jurisprudências e decisões legais relevantes de maneira rápida e eficiente com filtros personalizáveis.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Rede de Advogados e Consultores
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de uma rede de advogados conectados através de um sistema online" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/-fP9AUpJ3FF2kcJBIoTuOBAb1cf20nBGpi5_9lwNJc4.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Conecte-se diretamente a profissionais especializados, agende consultas online e escolha o advogado ideal para suas necessidades.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Análise Preditiva de Casos Jurídicos
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de gráficos e dados estatísticos em uma tela de computador" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/Wk1g_EjIaaXhwwjbiPFUv7qI7o_aah8Dj_3rv3hdZzM.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Utilize dados estatísticos para estimar a probabilidade de sucesso em litígios e tome decisões mais informadas.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Blog Interativo
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de uma pessoa lendo um blog jurídico em um tablet" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/KS1nbgwl8Yu9UaGqtfHJMK_Q8EzUL9-5BvbJWFdJ10w.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Acesse artigos atualizados sobre as tendências jurídicas mais recentes e participe de cursos online para aprofundar seus conhecimentos.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Proteção de Dados Pessoais
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de um cadeado digital representando segurança de dados" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/o6cFcVk1p34ExPPE0EO8BNDSzejvI4eT59R7LuSR5Oo.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Eduque-se sobre a importância da segurança digital e utilize nossas ferramentas para garantir a conformidade com a LGPD.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     Fórum de Discussões
+    </h3>
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Imagem de um fórum online com várias discussões jurídicas" class="w-full md:w-1/2 mb-4 md:mb-0" height="200" src="https://storage.googleapis.com/a1aa/image/c6ggwSVc9vxTPRamFcVsEV_twCyn_hKVRB6Uj-uB9EE.jpg" width="300"/>
+     <div class="md:ml-4">
+      <p>
+       Interaja, tire dúvidas e compartilhe experiências em nosso fórum moderado por advogados especializados.
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-black text-white p-4">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2023 Prometeus. Todos os direitos reservados.
+    </p>
+   </div>
+  </footer>
+ </body>
+ <script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+        document.getElementById("overlay").classList.toggle("active");
+    }
+</script>
+</html>
