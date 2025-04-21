@@ -13,13 +13,13 @@
    html {
       scroll-behavior: smooth;
     }
-    body {
-      font-family: 'Roboto', sans-serif;
+      body {
+      font-family: "Montserrat", sans-serif;
       background-color: #0D0D0D;
       color: #e0e0e0;
     }
     h1, h2, h3 {
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: #FFFFFF;
     }
     /* Scroll reveal animations */
@@ -635,7 +635,7 @@
 
     function generateContractText() {
       const {contractType, areaAtuacao, clausulas} = contractData;
-      let text = `Contrato de ${contractType}\nÁrea de Atuação: ${areaAtuacao}\n\nCláusulas:\n${clausulas}\n\n---\nEste contrato foi gerado automaticamente pela Prometeus.`;
+      let text = Contrato de ${contractType}\nÁrea de Atuação: ${areaAtuacao}\n\nCláusulas:\n${clausulas}\n\n---\nEste contrato foi gerado automaticamente pela Prometeus.;
       contractPreview.textContent = text;
     }
 
@@ -724,7 +724,7 @@
       // Simulate timestamp and link
       const timestamp = new Date().toISOString();
       const network = networkSelect.value;
-      const fakeLink = `https://explorer.${network.toLowerCase()}.org/tx/${hashHex}`;
+      const fakeLink = https://explorer.${network.toLowerCase()}.org/tx/${hashHex};
       verificationLink.href = fakeLink;
       verificationLink.textContent = fakeLink + ` (timestamp: ${timestamp})`;
       linkSection.classList.remove('hidden');
