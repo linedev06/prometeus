@@ -596,7 +596,7 @@
     // Compose document text with span-wrapped clauses for hover
     let docHtml = "";
     clauses.forEach((clause, i) => {
-      docHtml += <span class="clause" data-index="${i}">${escapeHtml(clause.text)}</span>\n\n;
+      docHtml += `<span class="clause" data-index="${i}">${escapeHtml(clause.text)}</span>\n\n`;
     });
     documentText.innerHTML = docHtml;
   }
