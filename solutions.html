@@ -213,6 +213,81 @@
     }
   </style>
  </head>
+  <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-4 bg-black" id="header" role="banner">
+   <a aria-label="Logo Prometeus" class="logo-container" href="/" tabindex="0">
+    <span class="logo-text" aria-hidden="true">
+     PROMETEUS
+    </span>
+    <span class="logo-underline" aria-hidden="true"></span>
+   </a>
+   <!-- Desktop Nav -->
+   <nav aria-label="Menu principal" class="hidden md:block" role="navigation">
+    <ul class="flex space-x-10 text-white text-sm font-light header-link tracking-widest lowercase">
+     <li>
+      <a class="hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/" tabindex="0">
+       início
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/solutions.html" tabindex="0">
+       soluções
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/simula.html" tabindex="0">
+       simulador
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="#contact" tabindex="0">
+       contato
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <!-- Mobile Hamburger -->
+   <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu" class="md:hidden focus:outline-none" id="hamburger-btn" type="button">
+    <div aria-hidden="true" class="hamburger" id="hamburger-icon">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </div>
+   </button>
+  </header>
+  <!-- Mobile Menu -->
+  <nav aria-label="Menu principal mobile" class="md:hidden bg-black fixed top-16 left-0 w-full z-40 border-t border-gray-800" id="mobile-menu" role="menu">
+   <ul class="flex flex-col space-y-4 py-6 px-6 text-white text-lg font-light lowercase tracking-widest" role="none">
+    <li role="none">
+     <a class="block w-full hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/" role="menuitem" tabindex="-1">
+      início
+     </a>
+    </li>
+    <li role="none">
+     <a class="block w-full hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/solutions.html" role="menuitem" tabindex="-1">
+      soluções
+     </a>
+    </li>
+    <li role="none">
+     <a class="block w-full hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="/simula.html" role="menuitem" tabindex="-1">
+      simulador
+     </a>
+    </li>
+    <li role="none">
+     <a class="block w-full hover:text-gray-300 focus:text-gray-300 focus:outline-none transition-colors duration-200" href="#contact" role="menuitem" tabindex="-1">
+      contato
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main class="pt-24 md:pt-32 max-w-7xl mx-auto px-6 md:px-12">
+   <!-- Hero Section -->
+   <section aria-label="Seção principal de destaque" class="flex flex-col items-center text-center text-white mb-20 px-4 md:px-0 max-w-4xl mx-auto">
+    <h1 class="hero-logo-text" style="font-family: 'Montserrat', sans-serif;">
+     PROMETEUS
+    </h1>
  <body class="relative">
   <!-- Hero Section -->
   <section class="min-h-screen flex flex-col justify-center items-center px-6 text-center py-20" id="hero">
